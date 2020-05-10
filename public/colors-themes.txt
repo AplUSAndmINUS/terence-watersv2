@@ -1,0 +1,40 @@
+## Colors
+
+# Light Mode
+#5B799B - Blue: Home Screen, highlight text, icons except menu, Light Mode
+#445F7E - Blue: Home Screen, icons, highlight text, Light Mode
+#748BA5 - Light blue: Subheading, text: Light Mode
+#383838 - Main text, Light Mode
+
+# Dark Mode
+#FFFFFF - White: All Icons, menu text, etc., Dark Mode
+#FFFFFF - White 70% transparencyt: Subheading, text: Dark Mode
+#FFFFFF - Main text, Dark Mode
+#748BA5 - Text fields, Light/Dark Mode
+
+Radial gradient:
+background: #5C5C5C: No radiant background: Dark Mode
+background: linear-gradient(#535353 0%, #383838 65%, #5c5c5c 100%); (Dark Mode)
+background: #FFFFFF: No radiant background: Light Mode
+background: linear-gradient(#fff 0%, #f4f4f4 65%, rgba(178, 177, 177, 0.22) 100%); (Light Mode)
+
+## Blog/Portfolio: 
+#FFFFFF (Tiles)- Light Mode
+#5B799B (Calendar Tiles)- Light Mode
+#E3E3E3 (Inactive Tiles)- Light Mode
+#748BA5 (Calendar Tiles)- Dark Mode
+#434242 (Inactive Tyles)- Dark Mode
+#5C5C5C (Tiles)- Dark Mode
+box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+
+# Fonts
+Proxima Nova
+  - Extrabold
+Helvetica 
+  - Light
+  - Regular
+Roboto
+  - Regular
+  - Italic
+  - Bold
+
