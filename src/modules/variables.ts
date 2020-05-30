@@ -1,21 +1,21 @@
+import { Colors } from './colors';
+
 export const BorderRadius = {
   none: 0,
   small: 3,
   base: 5,
   large: 10,
   xLarge: 24,
-  full: 500
+  full: 500,
 };
 
-export const BoxShadow = {
-  boxShadow: 
-};
+export const BoxShadow = `4px 3px 15px 0px ${Colors.transparentDark};`;
 
 export const FontFamily = {
   primary: 'Helvetica Neue',
   secondary: 'Roboto',
-  tertiary: 'Proxima Nova Extrabold'
-}
+  tertiary: 'Proxima Nova Extrabold',
+};
 
 export const FontSizeDesktop = {
   xsmall: 10,
@@ -31,7 +31,7 @@ export const FontSizeDesktop = {
   skills: 30,
   subheading: 48,
   heading: 60,
-  title: 96
+  title: 96,
 };
 
 export const FontSizeMobile = {
@@ -48,14 +48,14 @@ export const FontSizeMobile = {
   skills: 30,
   subheading: 48,
   heading: 60,
-  title: 96
+  title: 96,
 };
 
 export const FontWeight = {
   light: '300',
   normal: '400',
   semibold: '600',
-  bold: '700'
+  bold: '700',
 };
 
 export const IconSize = {
@@ -63,14 +63,14 @@ export const IconSize = {
   small: 16,
   base: 24,
   large: 32,
-  xLarge: 48
+  xLarge: 48,
 };
 
 export const Kerning = {
   none: 0,
   subheading: -15,
   heading: -25,
-  title: 50
+  title: 50,
 };
 
 export const Spacing = {
@@ -80,5 +80,5 @@ export const Spacing = {
   large: 16,
   xLarge: 32,
   xxLarge: 100,
-  xxxLarge: 200
+  xxxLarge: 200,
 };
