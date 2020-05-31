@@ -1,8 +1,14 @@
 // light mode colors
 export const ColorsLight = {
+  primary: '#445F7E',
+  secondary: '#F48FB1',
+  error: '#D32F2F',
+  warning: '#F57C00',
+  info: '#1976D2',
+  success: '#388E3C',
   black: '#383838',
   white: '#FFF',
-  blueHeading: '#5B799B',
+  blueHeading: '#445F7E',
   blueSubheading: '#748BA5',
   blueInputField: '#748BA5',
   card: '#FFF',
@@ -12,6 +18,12 @@ export const ColorsLight = {
 
 // dark mode colors
 export const ColorsDark = {
+  primary: '#5B799B',
+  secondary: '#F6A5C0',
+  error: '#E57373',
+  warning: '#FFB74D',
+  info: '#2196F3',
+  success: '#81C784',
   white: '#FFF',
   whiteSubheading: 'rgba(255,255,255,0.7)',
   blueHeading: '#5B799B',
@@ -31,14 +43,17 @@ export const Colors = {
   red: '#BB2222',
   purple: '#512EA8',
   lightPurple: '#7E4EF2',
-  primaryUnderlay: '#0062CC',
+  primary: '#0062CC',
+  secondary: '#F48FB1',
+  error: '#F44336',
+  warning: '#FF9800',
+  info: '#64B5F6',
+  success: '#4CAF50',
   flatUnderlay: '#E9E9E9',
   offBlack: '#3D4447',
-  success: '#9FBE3E',
-  warning: '#FFC107',
   danger: '#B85151',
   textDefault: '#3D4447',
   buttonDisabled: '#BFBFBF',
   transparentWhite: 'rgba(255, 255, 255, 0.4)',
-  transparentDark: 'rgba(0, 0, 0, 0.5)'
+  transparentDark: 'rgba(0, 0, 0, 0.5)',
 };

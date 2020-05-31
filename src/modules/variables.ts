@@ -52,10 +52,10 @@ export const FontSizeMobile = {
 };
 
 export const FontWeight = {
-  light: '300',
-  normal: '400',
-  semibold: '600',
-  bold: '700',
+  light: 300,
+  normal: 400,
+  semibold: 600,
+  bold: 700,
 };
 
 export const IconSize = {
@@ -78,7 +78,9 @@ export const Spacing = {
   small: 4,
   medium: 8,
   large: 16,
+  base: 24,
   xLarge: 32,
-  xxLarge: 100,
-  xxxLarge: 200,
+  xxLarge: 48,
+  xxxLarge: 100,
+  xxxxLarge: 200,
 };
