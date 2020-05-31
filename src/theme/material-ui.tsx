@@ -84,32 +84,32 @@ export const theme = useMemo(
         primary: {
           light: ColorsLight.primary,
           main: Colors.primary,
-          dark: ColorsDark.primary
+          dark: ColorsDark.primary,
         },
         secondary: {
           light: ColorsLight.secondary,
           main: Colors.secondary,
-          dark: ColorsDark.secondary
+          dark: ColorsDark.secondary,
         },
         error: {
           light: ColorsLight.error,
           main: Colors.error,
-          dark: ColorsDark.error
+          dark: ColorsDark.error,
         },
         warning: {
           light: ColorsLight.warning,
           main: Colors.warning,
-          dark: ColorsDark.warning
+          dark: ColorsDark.warning,
         },
         info: {
           light: ColorsLight.info,
           main: Colors.info,
-          dark: ColorsDark.info
+          dark: ColorsDark.info,
         },
         success: {
           light: ColorsLight.success,
           main: Colors.success,
-          dark: ColorsDark.success
+          dark: ColorsDark.success,
         },
         contrastThreshold: 3,
         tonalOffset: 0.25,
@@ -194,26 +194,26 @@ export const highContrastTheme = createMuiTheme({
   },
   palette: {
     primary: {
-      main: Colors.white
+      main: Colors.white,
     },
     secondary: {
-      main: Colors.white
+      main: Colors.white,
     },
     error: {
-      main: Colors.gray
+      main: Colors.gray,
     },
     warning: {
-      main: Colors.white
+      main: Colors.white,
     },
     info: {
-      main: Colors.white
+      main: Colors.white,
     },
     success: {
-      main: Colors.white
+      main: Colors.white,
     },
     contrastThreshold: 3,
     tonalOffset: 0.25,
-  }
+  },
 });
 
 // interface AvatarProps extends React.ComponentProps<typeof Avatar.default> {
