@@ -37,6 +37,7 @@ export const ColorsDark = {
 // standard colors
 export const Colors = {
   black: '#000',
+  white: '#FFF',
   gray: '#878787',
   green: '#64C84E',
   yellow: '#FEE44D',
