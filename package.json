@@ -20,6 +20,7 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "sb": "^5.3.19",
+    "storybook": "^5.3.19",
     "styled-components": "^5.1.0",
     "typescript": "^3.8.3"
   },
