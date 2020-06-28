@@ -1,15 +1,15 @@
-import { useMemo } from 'react';
-import { createMuiTheme } from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+import React, { useMemo } from 'react';
+import * as Mui from '@material-ui/core';
+import styled from 'styled-components';
 
 import { Colors, ColorsDark, ColorsLight } from '../modules/colors';
-import { BorderRadius, FontWeight } from '../modules/variables';
+import { BorderRadius, FontSizeDesktop, FontWeight } from '../modules/variables';
 
 // line 10 needs to be passed as a prop toggle
-const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+const prefersDarkMode = Mui.useMediaQuery('(prefers-color-scheme: dark)');
 export const theme = useMemo(
   () =>
-    createMuiTheme({
+    Mui.createMuiTheme({
       breakpoints: {
         values: {
           xs: 0,
@@ -118,7 +118,7 @@ export const theme = useMemo(
   [prefersDarkMode]
 );
 
-export const highContrastTheme = createMuiTheme({
+export const highContrastTheme = Mui.createMuiTheme({
   breakpoints: {
     values: {
       xs: 0,
@@ -216,38 +216,78 @@ export const highContrastTheme = createMuiTheme({
   },
 });
 
-// interface AvatarProps extends React.ComponentProps<typeof Avatar.default> {
-//   size?: number;
-// }
+interface AvatarProps extends React.ComponentProps<typeof Mui.Avatar> {
+  size?: number;
+}
 
-// export const Avatar = ({ size, ...rest }: AvatarProps) => {
-//   return (
-//     <Avatar.default
-//       {...rest}
-//       style={{
-//         width: size,
-//         height: size,
-//         ...rest.style,
-//       }}
-//     />
-//   );
-// };
+export const MuiAvatar = ({ size, ...rest }: AvatarProps) => {
+  return (
+    <Mui.Avatar
+      {...rest}
+      style={{
+        width: size,
+        height: size,
+        ...rest.style,
+      }}
+    />
+  );
+};
 
-// export interface ButtonProps extends React.ComponentProps<typeof Button.default> {
-//   loading?: boolean;
-// }
+export interface ButtonProps extends React.ComponentProps<typeof Mui.Button> {
+  loading?: boolean;
+}
 
-// export const Button = ({ children, disabled, loading, ...rest }: ButtonProps) => {
-//   return (
-//     <Button.default {...rest}>
-//       {children}
-//       {loading ? (
-//         <CircularProgress.default
-//           size={20}
-//           style={{ position: 'absolute', left: 0, right: 0, top: 0, bottom: 0, margin: 'auto' }}
-//           data-testid="button loading"
-//         />
-//       ) : null}
-//     </Button.default>
-//   );
-// };
+export const MuiButton = ({ children, disabled, loading, ...rest }: ButtonProps) => {
+  return (
+    <Mui.Button {...rest}>
+      {children}
+      {loading ? (
+        <Mui.CircularProgress
+          size={20}
+          style={{ position: 'absolute', left: 0, right: 0, top: 0, bottom: 0, margin: 'auto' }}
+          data-testid="button loading"
+        />
+      ) : null}
+    </Mui.Button>
+  );
+};
+
+interface MuiTypographyProps extends Omit<React.ComponentProps<typeof Mui.Typography>, 'color'> {
+  color?: 'inherit' | 'initial' | 'primary' | 'secondary' | 'textPrimary' | 'textSecondary' | 'error';
+  fontSize?: number;
+  fontWeight?: number;
+  textTransform?: 'capitalize' | 'lowercase' | 'initial' | 'inherit' | 'uppercase';
+  component?: React.ComponentType | string;
+}
+
+const colorPalette = ['primary', 'secondary', 'textPrimary', 'textSecondary', 'error'] as const;
+
+const isColorPaletteColor = (color: any): color is typeof colorPalette[number] => {
+  return colorPalette.includes(color);
+};
+
+export const MuiTheme = typeof theme;
+export const MuiThemeProvider: React.FC = ({ children }) => (
+  <Mui.ThemeProvider theme={theme}>{children}</Mui.ThemeProvider>
+);
+
+export const MuiTypography = (props: MuiTypographyProps) => {
+  return (
+    <Mui.Typography
+      {...props}
+      color={isColorPaletteColor(props.color) ? props.color : 'initial'}
+      style={{
+        fontSize: props.fontSize ? `${props.fontSize}px` : `${FontSizeDesktop.base}px`,
+        fontWeight: props.fontWeight ? props.fontWeight : FontWeight.normal,
+        textTransform: props.textTransform ? props.textTransform : undefined,
+        ...props.style,
+      }}
+    />
+  );
+};
+
+export const useMuiMediaQuery = (arg: (theme: Mui.Theme) => string) => Mui.useMediaQuery<typeof theme>(arg);
+
+export const CursorBox = styled(Mui.Box)`
+  cursor: pointer;
+`;
