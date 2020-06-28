@@ -6,7 +6,6 @@ import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import { addDecorator } from '@storybook/react';
 
 import { GlobalStyles } from '../src/globalStyles';
-import { theme } from '../src/theme/material-ui';
 
 const ProviderDecorator = (storyFn, theme) => (
   <BrowserRouter>
