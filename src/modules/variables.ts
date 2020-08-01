@@ -12,9 +12,9 @@ export const BorderRadius = {
 export const BoxShadow = `4px 3px 15px 0px ${Colors.transparentDark};`;
 
 export const FontFamily = {
-  primary: 'Helvetica Neue',
-  secondary: 'Roboto',
-  tertiary: 'Proxima Nova Extrabold',
+  primary: 'Roboto',
+  secondary: 'Proxima Nova',
+  tertiary: 'Helvetica Neue',
 };
 
 export const FontSizeDesktop = {

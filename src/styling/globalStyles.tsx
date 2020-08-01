@@ -6,7 +6,7 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     background-color: ${Colors.white};
-    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica', 'Helvetica Neue', 'Segoe UI', 'Proxima Nova', 'Roboto', 'Open Sans', 'Droid Sans', 'Arial', 'sans-serif';
+    font-family: -apple-system, BlinkMacSystemFont, 'Proxima Nova', 'Roboto', 'Open Sans', 'Droid Sans', 'Helvetica Neue', 'Arial', 'sans-serif';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 14px;
