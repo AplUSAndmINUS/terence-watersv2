@@ -84,3 +84,14 @@ export const Spacing = {
   xxxLarge: 100,
   xxxxLarge: 200,
 };
+
+export const ZIndex = {
+  min: -999,
+  base: 1,
+  low: 10,
+  medium: 20,
+  high: 30,
+  spinner: 50,
+  navigation: 100,
+  max: 999,
+};
