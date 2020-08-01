@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 import { Colors } from './modules/colors';
 
 export const GlobalStyles = createGlobalStyle`
+  @import url('./fonts.scss');
   html, body {
     margin: 0;
     padding: 0;

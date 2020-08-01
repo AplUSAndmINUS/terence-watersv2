@@ -3,7 +3,7 @@ import React from 'react';
 import DayJSUtils from '@date-io/dayjs';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 
-import { GlobalStyles } from './styling/globalStyles';
+import { GlobalStyles } from './globalStyles';
 import { MuiThemeProvider } from './theme/material-ui';
 
 function App() {
