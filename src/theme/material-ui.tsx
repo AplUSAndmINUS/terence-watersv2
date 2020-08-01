@@ -1,22 +1,19 @@
 import React from 'react';
-import {
-  Avatar,
-  Backdrop,
-  Box,
-  Button,
-  CircularProgress,
-  createMuiTheme,
-  ThemeProvider,
-  Typography,
-  useMediaQuery,
-} from '@material-ui/core';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core';
+import * as Avatar from '@material-ui/core/Avatar';
+import * as Backdrop from '@material-ui/core/Backdrop';
+import * as Box from '@material-ui/core/Box';
+import * as Button from '@material-ui/core/Button';
+import * as CircularProgress from '@material-ui/core/CircularProgress';
+import * as Typography from '@material-ui/core/Typography';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import styled from 'styled-components';
 
 import { Colors, ColorsDark, ColorsLight } from '../modules/colors';
 import { BorderRadius, FontSizeDesktop, FontWeight, ZIndex } from '../modules/variables';
 
 // line 10 needs to be passed as a prop toggle
-// const prefersDarkMode = Mui.useMediaQuery('(prefers-color-scheme: dark)');
+// const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 export const myTheme = createMuiTheme({
   breakpoints: {
     values: {
@@ -223,23 +220,26 @@ export const highContrastTheme = createMuiTheme({
 export type MuiThemeOne = typeof myTheme;
 export type MuiThemeTwo = typeof highContrastTheme;
 
+export { default as MuiAppBar } from '@material-ui/core/AppBar';
+export * from '@material-ui/core/AppBar';
+
 interface AvatarProps {
   size?: number;
 }
 
 export const MuiAvatar = ({ size, ...rest }: AvatarProps) => {
   return (
-    <Avatar
+    <Avatar.default
       {...rest}
       style={{
         width: size,
-        height: size
+        height: size,
       }}
     />
   );
 };
 
-export const MuiBackdrop = styled(Backdrop)`
+export const MuiBackdrop = styled(Backdrop.default)`
   && {
     z-index: ${ZIndex.max};
   }
@@ -261,22 +261,24 @@ export * from '@material-ui/core/Box';
 export { default as MuiBreadcrumbs } from '@material-ui/core/Breadcrumbs';
 export * from '@material-ui/core/Breadcrumbs';
 
-export interface ButtonProps extends React.ComponentProps<typeof Button> {
+export * from '@material-ui/core/Button';
+
+export interface ButtonProps extends React.ComponentProps<typeof Button.default> {
   loading?: boolean;
 }
 
 export const MuiButton = ({ children, disabled, loading, ...rest }: ButtonProps) => {
   return (
-    <Button {...rest}>
+    <Button.default disabled={disabled || loading} {...rest}>
       {children}
       {loading ? (
-        <CircularProgress
+        <CircularProgress.default
           size={20}
           style={{ position: 'absolute', left: 0, right: 0, top: 0, bottom: 0, margin: 'auto' }}
           data-testid="button loading"
         />
       ) : null}
-    </Button>
+    </Button.default>
   );
 };
 
@@ -299,14 +301,14 @@ export const MuiThemeProvider: React.FC = ({ children }) => <ThemeProvider theme
 
 export const MuiTypography = (props: MuiTypographyProps) => {
   return (
-    <Typography
+    <Typography.default
       {...props}
       color={isColorPaletteColor(props.color) ? props.color : 'initial'}
       style={{
         fontSize: props.fontSize ? `${props.fontSize}px` : `${FontSizeDesktop.base}px`,
         fontWeight: props.fontWeight ? props.fontWeight : FontWeight.normal,
         textTransform: props.textTransform ? props.textTransform : undefined,
-        ...props
+        ...props,
       }}
     />
   );
@@ -647,8 +649,9 @@ export * from '@material-ui/core/Zoom';
 export { default as MuiAutoComplete } from '@material-ui/lab/Autocomplete';
 export * from '@material-ui/lab/Autocomplete';
 
-export const useMuiMediaQuery = (arg: (theme: MuiThemeOne | MuiThemeTwo) => string) => useMediaQuery<typeof myTheme>(arg);
+export const useMuiMediaQuery = (arg: (theme: MuiThemeOne | MuiThemeTwo) => string) =>
+  useMediaQuery<typeof myTheme>(arg);
 
-export const MuiCursorBox = styled(Box)`
+export const MuiCursorBox = styled(Box.default)`
   cursor: pointer;
 `;
