@@ -2443,7 +2443,7 @@
   dependencies:
     core-js "^3.0.1"
 
-"@storybook/cli@5.3.19", "@storybook/cli@^5.3.19":
+"@storybook/cli@5.3.19":
   version "5.3.19"
   resolved "https://registry.yarnpkg.com/@storybook/cli/-/cli-5.3.19.tgz#b48fb5df93b8f30de14ac51a6de742381c199443"
   integrity sha512-r6+Ov/sqcCVoWTu5p3D41jDwrKA9koXWjHDUkN3NWcJIXAS9szesZBCFREdy4h2MNi65LinZZG+9krpCKgX5gA==
