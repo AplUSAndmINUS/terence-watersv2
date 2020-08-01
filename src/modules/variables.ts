@@ -17,24 +17,7 @@ export const FontFamily = {
   tertiary: 'Helvetica Neue',
 };
 
-export const FontSizeDesktop = {
-  xsmall: 10,
-  small: 12,
-  base: 14,
-  medium: 15,
-  large: 16,
-  smallButton: 18,
-  smallHeading: 20,
-  mediumHeading: 24,
-  buttonLarge: 27,
-  largeHeading: 28,
-  skills: 30,
-  subheading: 48,
-  heading: 60,
-  title: 96,
-};
-
-export const FontSizeMobile = {
+export const FontSize = {
   xsmall: 10,
   small: 12,
   base: 14,

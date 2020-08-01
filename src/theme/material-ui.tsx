@@ -10,7 +10,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import styled from 'styled-components';
 
 import { Colors, ColorsDark, ColorsLight } from '../modules/colors';
-import { BorderRadius, FontSizeDesktop, FontWeight, ZIndex } from '../modules/variables';
+import { BorderRadius, FontSize, FontWeight, ZIndex } from '../modules/variables';
 
 // line 10 needs to be passed as a prop toggle
 // const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
@@ -305,7 +305,7 @@ export const MuiTypography = (props: MuiTypographyProps) => {
       {...props}
       color={isColorPaletteColor(props.color) ? props.color : 'initial'}
       style={{
-        fontSize: props.fontSize ? `${props.fontSize}px` : `${FontSizeDesktop.base}px`,
+        fontSize: props.fontSize ? `${props.fontSize}px` : `${FontSize.base}px`,
         fontWeight: props.fontWeight ? props.fontWeight : FontWeight.normal,
         textTransform: props.textTransform ? props.textTransform : undefined,
         ...props,
