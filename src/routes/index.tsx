@@ -14,13 +14,16 @@ const Routes = () => {
   return (
     <Switch>
       <Route path="/" exact component={Home} />
+      <Route path="/404" component={Page404} />
       <Route path="/about" exact component={About} />
       <Route path="/blog" exact component={Blog} />
       <Route path="/contact" exact component={Contact} />
       <Route path="/intro" exact component={Intro} />
       <Route path="/music" exact component={Music} />
       <Route path="/portfolio" exact component={Portfolio} />
-      <Route component={Home} />
+      <Route component={Page404} />
     </Switch>
-  )
-}
+  );
+};
+
+export default Routes;
