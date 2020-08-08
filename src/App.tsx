@@ -14,12 +14,7 @@ function App() {
       <MuiThemeProvider>
         <MuiPickersUtilsProvider utils={DayJSUtils}>
           <GlobalStyles />
-          <div className="App">
-            <h1>This is an app!</h1>
-            <nav>
-              <Routes />
-            </nav>
-          </div>
+          <Routes />
         </MuiPickersUtilsProvider>
       </MuiThemeProvider>
     </Router>
