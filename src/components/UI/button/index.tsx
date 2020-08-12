@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { MuiButton } from '../../theme/material-ui';
+import { MuiButton } from '../../../theme/theme';
 
 interface Props {
   children: ReactNode;

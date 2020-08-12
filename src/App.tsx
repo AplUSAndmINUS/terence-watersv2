@@ -6,7 +6,7 @@ import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import { GlobalStyles } from './globalStyles';
 import Routes from './routes';
 import history from './services/history';
-import { MuiThemeProvider } from './theme/material-ui';
+import { MuiThemeProvider } from './theme/theme';
 
 function App() {
   return (
