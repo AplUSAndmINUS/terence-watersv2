@@ -28,7 +28,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "sb": "^5.3.19",
-    "styled-components": "^5.1.0",
+    "styled-components": "^5.2.1",
     "typescript": "^3.9.7"
   },
   "scripts": {
@@ -56,8 +56,11 @@
     ]
   },
   "devDependencies": {
+    "@storybook/preset-typescript": "^3.0.0",
+    "@storybook/react": "^6.1.8",
     "prettier": "2.0.5",
-    "sass-loader": "^8.0.2",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.1.0",
     "tslint": "^6.1.1",
     "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.3.0",
