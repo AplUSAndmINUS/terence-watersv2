@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Icon from '../UI/icon/'
+import Icon from '../UI/icon/';
 
 interface Props {
   text?: string;
@@ -9,7 +9,7 @@ interface Props {
 const Menu = (props: Props) => {
   return (
     <div>
-      <Icon text={props.text} />
+      <h1>{props.text}</h1>
     </div>
   )
 }
