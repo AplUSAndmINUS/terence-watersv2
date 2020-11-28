@@ -2,10 +2,14 @@ import React from 'react';
 
 import Icon from '../UI/icon/'
 
-const Menu = () => {
+interface Props {
+  text?: string;
+}
+
+const Menu = (props: Props) => {
   return (
     <div>
-      <Icon />
+      <Icon text={props.text} />
     </div>
   )
 }

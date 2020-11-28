@@ -18,10 +18,11 @@ export interface Props {
   set?: 'assets' | 'downloading' | 'material';
   stroke?: string;
   strokeWidth?: string | number;
+  text?: string;
 }
 
 const Icon = (props: Props) => {
-  return <div>Icon</div>
+  return <div>{props.text ? props.text : 'Icon'}</div>
 };
 
 Icon.defaultProps = {
