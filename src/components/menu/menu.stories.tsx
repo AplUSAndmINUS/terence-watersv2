@@ -5,7 +5,7 @@ import Menu from './index';
 export const Component = () => {
   return (
     <div>
-      <Menu text={"Hello World!"} />
+      <Menu />
     </div>
   )
 }

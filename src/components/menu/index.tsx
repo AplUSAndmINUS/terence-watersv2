@@ -3,13 +3,14 @@ import React from 'react';
 import Icon from '../UI/icon/'
 
 interface Props {
+  name?: string;
   text?: string;
 }
 
 const Menu = (props: Props) => {
   return (
     <div>
-      <Icon text={props.text} />
+      <Icon name="menu_open" text={props.text} />
     </div>
   )
 }

@@ -1,6 +1,12 @@
 import React from 'react';
+import * as MaterialIcons from '@material-ui/icons';
+import MaterialIcon from '@material-ui/core/Icon';
+import camelCase from 'lodash/camelCase';
+import upperFirst from 'lodash/upperFirst';
 
-export interface Props {
+import { Colors } from '../../../modules/colors';
+import { IconSize } from '../../../modules/variables';
+export interface IconProps {
   accessibilityLabel?: string;
   active?: boolean;
   activeFillColor?: string;
@@ -13,7 +19,7 @@ export interface Props {
   height?: string | number;
   width?: string | number;
   size?: string | number;
-  name?: string;
+  name: string;
   onPress?: () => void | Function;
   set?: 'assets' | 'downloading' | 'material';
   stroke?: string;
@@ -21,12 +27,18 @@ export interface Props {
   text?: string;
 }
 
-const Icon = (props: Props) => {
-  return <div>{props.text ? props.text : 'Icon'}</div>
+const pascalCase = (name: string) => upperFirst(camelCase(name));
+
+export const Icon = ({ color = Colors.black, size = IconSize.base, 
+  name, ...rest}: IconProps) => {
+  const normalizedName = pascalCase(name) as keyof typeof MaterialIcons;
+  const IconComponent = MaterialIcons[normalizedName] as typeof MaterialIcon;
+
+  return <IconComponent {...rest} style={{ color, fontSize: size}} />;
 };
 
 Icon.defaultProps = {
-  set: 'assets'
+  set: 'material'
 };
 
 export default Icon;
