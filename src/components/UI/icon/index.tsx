@@ -34,7 +34,7 @@ export const Icon = ({ color = Colors.black, size = IconSize.base,
   const normalizedName = pascalCase(name) as keyof typeof MaterialIcons;
   const IconComponent = MaterialIcons[normalizedName] as typeof MaterialIcon;
 
-  return <IconComponent {...rest} style={{ color, fontSize: size}} />;
+  return <IconComponent {...rest} style={{ color, fontSize: `${size}pt` }} />;
 };
 
 Icon.defaultProps = {
