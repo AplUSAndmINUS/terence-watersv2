@@ -1,11 +1,7 @@
 import React from 'react';
 
 import Icon from '../UI/icon/';
-import { MenuRow, SocialIcon } from './styled';
-import Facebook from '../../assets/svgs/facebook.svg';
-import { ReactComponent as Instagram } from '../../assets/svgs/instagram.svg';
-import { ReactComponent as Twitch } from '../../assets/svgs/twitch.svg';
-import { ReactComponent as Twitter } from '../../assets/svgs/twitter.svg';
+import { MenuRow } from './styled';
 import { Colors } from '../../modules/colors';
 
 export interface MenuProps {
